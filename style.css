@@ -1,0 +1,185 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 100px 10%;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #6b1e23; /* merah maroon */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+}
+
+/* HOME */
+.home {
+    background: linear-gradient(135deg, #7a2328, #a94442);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.profile-img {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+.home h1 {
+    font-size: 42px;
+}
+
+.home h3 {
+    font-weight: normal;
+    margin: 10px 0 20px;
+}
+
+.home p {
+    line-height: 1.6;
+}
+
+/* SECTION TITLE */
+.section h2 {
+    color: #6b1e23;
+    margin-bottom: 30px;
+}
+
+/* BOX */
+.box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* SKILLS */
+.skill-bar {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.skill-bar span {
+    display: block;
+    height: 10px;
+    background: #6b1e23;
+}
+
+.html { width: 80%; }
+.css { width: 70%; }
+.js { width: 60%; }
+
+/* CONTACT */
+#contact ul {
+    list-style: none;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        background: #6b1e23;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        padding: 15px;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .section {
+        padding: 100px 6%;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+}
+
+.education-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.edu-logo {
+    width: 80px;
+    height: auto;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#experience .box {
+    margin-bottom: 25px;
+}
